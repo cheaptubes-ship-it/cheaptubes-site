@@ -7,7 +7,10 @@ import { Category, Product, Pillar } from "./types";
 export const pillars: Pillar[] = [
   {
     id: "graphene",
+    slug: "graphene",
     title: "Graphene Materials",
+    description:
+      "High-performance graphene nanoplatelets (GNPs) and dispersions engineered for conductivity, strength, and advanced composites.",
     summary:
       "Industry-leading graphene nanoplatelets and dispersions delivering unmatched conductivity, strength, and versatility.",
     bullets: [
@@ -18,7 +21,10 @@ export const pillars: Pillar[] = [
   },
   {
     id: "carbon-nanotubes",
+    slug: "carbon-nanotubes",
     title: "Carbon Nanotubes (CNTs)",
+    description:
+      "MWCNT powders and Flexiphene™ CNT dispersions for reinforcement, EMI shielding, conductivity, and industrial applications.",
     summary:
       "MWNT and specialty CNT dispersions engineered for polymer reinforcement, EMI shielding, and advanced R&D applications.",
     bullets: [
@@ -29,7 +35,10 @@ export const pillars: Pillar[] = [
   },
   {
     id: "nanocomposites",
+    slug: "nanocomposites",
     title: "Polymer Nanocomposites",
+    description:
+      "Plug-and-play CNT and graphene masterbatches that dramatically improve mechanical strength, conductivity, and processability.",
     summary:
       "Pre-compounded CNT and graphene masterbatches providing plug-and-play performance improvements.",
     bullets: [
