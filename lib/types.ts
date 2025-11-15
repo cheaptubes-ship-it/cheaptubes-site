@@ -20,7 +20,8 @@ export interface Pillar {
   id: string;
   slug: string;
   title: string;
-  summary: string;
+  description: string;  // <-- ADD THIS
+  summary: string;      // optional—remove if unused
   bullets: string[];
 }
 
