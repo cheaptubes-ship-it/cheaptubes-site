@@ -55,22 +55,25 @@ export const pillars: Pillar[] = [
 export const categories: Category[] = [
   {
     id: "graphene",
+    slug: "graphene",
     name: "Graphene Nanoplatelets",
     description: "High-performance GNPs for composites, coatings, inks, and additives.",
     image: "/images/categories/graphene.jpg",
   },
   {
     id: "cnt",
+    slug: "cnt",
     name: "Carbon Nanotubes",
     description: "Multi-wall CNT powders and Flexiphene™ CNT dispersions.",
     image: "/images/categories/cnt.jpg",
   },
   {
     id: "nanocomposites",
+    slug: "nanocomposites",
     name: "Polymer Nanocomposites",
     description: "CNT and graphene masterbatches for thermoplastics.",
     image: "/images/categories/nanocomposites.jpg",
-  }
+  },
 ];
 
 /* ---------------------------
