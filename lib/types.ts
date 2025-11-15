@@ -18,6 +18,7 @@ export interface Product {
 
 export interface Pillar {
   id: string;
+  slug: string;
   title: string;
   summary: string;
   bullets: string[];
