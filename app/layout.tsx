@@ -1,47 +1,43 @@
 import "./globals.css";
-import { ReactNode } from "react";
-import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "CheapTubes | Advanced Nanomaterials",
-  description: "Graphene, CNTs, nanocomposites, and advanced nanomaterials engineered for tomorrow’s solutions.",
+  description:
+    "Graphene, CNTs, dispersions, nanocomposites, and advanced nanomaterials engineered for real-world use.",
+  icons: {
+    icon: "/cheaptubes-logo.png",
+  },
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="bg-slate-950 text-white">
-      <body className="min-h-screen flex flex-col">
-        {/* NAVBAR */}
-        <nav className="w-full border-b border-white/10 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50">
+    <html lang="en">
+      <body className="bg-slate-950 text-white flex flex-col min-h-screen">
+
+        {/* HEADER */}
+        <header className="w-full border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <Link href="/" className="text-xl font-bold tracking-wide">
-              Cheap<span className="text-blue-400">Tubes</span>
-            </Link>
-
-            <div className="flex items-center gap-8 text-sm font-medium">
-              <Link href="/pillars" className="hover:text-blue-400 transition">
-                Pillars
-              </Link>
-              <Link href="/categories" className="hover:text-blue-400 transition">
-                Categories
-              </Link>
-              <Link href="/products" className="hover:text-blue-400 transition">
-                Products
-              </Link>
-              <Link href="/resources" className="hover:text-blue-400 transition">
-                Resources
-              </Link>
-              <Link
-                href="/sds"
-                className="px-4 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 transition text-white"
-              >
-                SDS
-              </Link>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/cheaptubes-logo.png"
+                width={40}
+                height={40}
+                alt="CheapTubes Logo"
+                className="opacity-95 hover:opacity-100 drop-shadow-[0_0_6px_rgba(0,0,0,0.4)] transition"
+              />
+              <span className="text-xl font-semibold">CheapTubes</span>
             </div>
-          </div>
-        </nav>
 
-        {/* CONTENT */}
+            <nav className="flex gap-6 text-sm text-gray-300">
+              <a href="/" className="hover:text-blue-400">Home</a>
+              <a href="/categories" className="hover:text-blue-400">Materials</a>
+              <a href="/contact" className="hover:text-blue-400">Contact</a>
+            </nav>
+          </div>
+        </header>
+
+        {/* MAIN CONTENT */}
         <main className="flex-1 w-full">{children}</main>
 
         {/* FOOTER */}
@@ -49,33 +45,33 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-3 gap-8 text-sm">
             <div>
               <h4 className="font-semibold mb-3 text-blue-400">Company</h4>
-              <ul className="space-y-2">
-                <li><Link href="/" className="hover:text-blue-400">Home</Link></li>
-                <li><Link href="/pillars" className="hover:text-blue-400">Pillars</Link></li>
-                <li><Link href="/categories" className="hover:text-blue-400">Categories</Link></li>
-                <li><Link href="/products" className="hover:text-blue-400">Products</Link></li>
+              <ul className="space-y-2 text-gray-300">
+                <li><a href="/">Home</a></li>
+                <li><a href="/categories">Materials</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-3 text-blue-400">Products</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li><a href="/categories/graphene">Graphene</a></li>
+                <li><a href="/categories/cnt">Carbon Nanotubes</a></li>
+                <li><a href="/categories/nanocomposites">Nanocomposites</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold mb-3 text-blue-400">Resources</h4>
-              <ul className="space-y-2">
-                <li><Link href="/resources" className="hover:text-blue-400">Resources</Link></li>
-                <li><Link href="/sds" className="hover:text-blue-400">Safety Data Sheets</Link></li>
-                <li><Link href="/tds" className="hover:text-blue-400">Technical Data Sheets</Link></li>
+              <ul className="space-y-2 text-gray-300">
+                <li>SDS / TDS</li>
+                <li>Documentation</li>
+                <li>Support</li>
               </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-3 text-blue-400">Contact</h4>
-              <p className="text-gray-300 leading-relaxed">
-                CheapTubes Inc.<br />
-                Nano-materials manufacturer & global supplier.
-              </p>
-              <p className="mt-3 text-gray-400 text-sm">© {new Date().getFullYear()} CheapTubes Inc. All rights reserved.</p>
             </div>
           </div>
         </footer>
+
       </body>
     </html>
   );

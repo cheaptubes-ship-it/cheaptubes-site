@@ -1,66 +1,69 @@
-'use client';
+"use client";
 
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Microscope } from 'lucide-react';
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
-      <div className="absolute inset-0 bg-grid-slate-200/50 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 rounded-full text-blue-700 text-sm font-medium mb-8 animate-fade-in">
-            <Microscope className="w-4 h-4" />
-            <span>Innovation at the Molecular Level</span>
-          </div>
-
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight">
-            Advanced Nanomaterials for{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-              Tomorrow's Solutions
-            </span>
-          </h1>
-
-          <p className="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Engineered at the nanoscale, our materials deliver unprecedented performance for industrial, medical, and research applications worldwide.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              className="text-base px-8 py-6 bg-slate-900 hover:bg-slate-800 text-white group"
-            >
-              Explore Products
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-base px-8 py-6 border-2 hover:bg-slate-50"
-            >
-              Contact Sales
-            </Button>
-          </div>
-
-          <div className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-slate-900 mb-1">500+</div>
-              <div className="text-sm text-slate-600">Global Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-slate-900 mb-1">1000+</div>
-              <div className="text-sm text-slate-600">Applications</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-slate-900 mb-1">99.9%</div>
-              <div className="text-sm text-slate-600">Purity Standard</div>
-            </div>
-          </div>
-        </div>
+    <section className="relative overflow-hidden bg-gradient-to-b from-black via-slate-900 to-black text-white py-28">
+      {/* Background Glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-blue-600/20 rounded-full blur-[180px]" />
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
+      <div className="relative max-w-6xl mx-auto px-6 text-center">
+        {/* StoryBrand Heading */}
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          Nanomaterials That Make Your Products  
+          <span className="text-blue-400"> Stronger, Lighter, and More Conductive</span>
+        </h1>
+
+        {/* Subheadline */}
+        <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+          Graphene, carbon nanotubes, nanocomposites, and advanced dispersions — 
+          engineered for real-world performance and trusted by over{" "}
+          <span className="text-white font-medium">10,000 customers worldwide</span>.
+        </p>
+
+        {/* Value Props */}
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+          {[
+            "Cheaper • Stronger",
+            "Thinner • Lighter",
+            "Higher Conductivity",
+            "Fewer Chemicals Needed",
+          ].map((item) => (
+            <div
+              key={item}
+              className="border border-white/10 bg-white/5 rounded-xl p-5 text-sm font-medium tracking-wide"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="mt-12 flex justify-center gap-4">
+          <Link
+            href="/products"
+            className="px-8 py-4 text-lg font-semibold bg-blue-500 hover:bg-blue-600 rounded-xl transition shadow-lg shadow-blue-600/20"
+          >
+            Browse Products
+          </Link>
+
+          <Link
+            href="/contact"
+            className="px-8 py-4 text-lg font-semibold bg-white/10 hover:bg-white/20 rounded-xl border border-white/20 transition"
+          >
+            Request Pricing
+          </Link>
+        </div>
+
+        {/* Trust and Guarantee */}
+        <p className="mt-10 text-gray-400 text-sm max-w-xl mx-auto">
+          All materials ship with SDS & TDS. Guaranteed to meet published specs — 
+          or we replace or refund your order.
+        </p>
+      </div>
     </section>
   );
 }

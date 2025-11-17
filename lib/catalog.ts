@@ -10,13 +10,11 @@ export const pillars: Pillar[] = [
     slug: "graphene",
     title: "Graphene Materials",
     description:
-      "High-performance graphene nanoplatelets (GNPs) and dispersions engineered for conductivity, strength, and advanced composites.",
-    summary:
-      "Industry-leading graphene nanoplatelets and dispersions delivering unmatched conductivity, strength, and versatility.",
+      "Performance-ready graphene optimized for real industrial loadings, with superior conductivity and reliable dispersion.",
     bullets: [
-      "High surface area for composites & coatings",
+      "Optimized for <0.02 wt% loading performance",
       "Excellent electrical & thermal conductivity",
-      "Stable dispersions across multiple solvents"
+      "Stable dispersions across water, IPA, NMP, and custom carriers",
     ],
   },
   {
@@ -24,57 +22,76 @@ export const pillars: Pillar[] = [
     slug: "carbon-nanotubes",
     title: "Carbon Nanotubes (CNTs)",
     description:
-      "MWCNT powders and Flexiphene™ CNT dispersions for reinforcement, EMI shielding, conductivity, and industrial applications.",
-    summary:
-      "MWNT and specialty CNT dispersions engineered for polymer reinforcement, EMI shielding, and advanced R&D applications.",
+      "CNT powders and Flexiphene™ dispersions engineered for predictable performance in polymers, coatings, and films.",
     bullets: [
-      "High aspect ratio for structural enhancement",
+      "High-aspect-ratio CNTs for mechanical & electrical performance",
       "EMI/RFI shielding optimization",
-      "Dispersions include Flexiphene™ technology"
+      "Flexiphene™ dispersions for plug-and-play processing",
     ],
   },
   {
-    id: "nanocomposites",
-    slug: "nanocomposites",
+    id: "polymer-nanocomposites",
+    slug: "polymer-nanocomposites",
     title: "Polymer Nanocomposites",
     description:
-      "Plug-and-play CNT and graphene masterbatches that dramatically improve mechanical strength, conductivity, and processability.",
-    summary:
-      "Pre-compounded CNT and graphene masterbatches providing plug-and-play performance improvements.",
+      "Ready-to-use graphene and CNT masterbatches for predictable reinforcement, conductivity, and processing reliability.",
     bullets: [
-      "Compatible with common thermoplastics",
-      "Improved tensile strength & conductivity",
-      "Lower dosage needed vs. raw nanomaterials"
+      "PP, PA6, ABS, epoxy masterbatches",
+      "Lower required loadings vs. raw nanomaterials",
+      "Designed for injection molding & extrusion",
     ],
-  }
+  },
 ];
+
 
 /* ---------------------------
    PRODUCT CATEGORIES
 ---------------------------- */
-export const categories: Category[] = [
+export const categories = [
   {
-    id: "graphene",
+    name: "Graphene Nanomaterials",
     slug: "graphene",
-    name: "Graphene Nanoplatelets",
-    description: "High-performance GNPs for composites, coatings, inks, and additives.",
-    image: "/images/categories/graphene.jpg",
+    image: "/images/categories/graphene-nanoplatelets-2d-structure.jpg",
+    description:
+      "GNPs, GO, rGO, functionalized graphene, and graphene dispersions engineered for real-world performance.",
   },
   {
-    id: "cnt",
+    name: "Carbon Nanotubes (MWNT & SWNT)",
     slug: "cnt",
-    name: "Carbon Nanotubes",
-    description: "Multi-wall CNT powders and Flexiphene™ CNT dispersions.",
-    image: "/images/categories/cnt.jpg",
+    image: "/images/categories/carbon-nanotubes-mwnt-sample-render.jpg",
+    description:
+      "High-quality multi-wall and single-wall CNTs with consistent morphology and reliable performance.",
   },
   {
-    id: "nanocomposites",
+    name: "MXenes & 2D Materials",
+    slug: "mxene",
+    image: "/images/categories/mxene-tmd-2d-material-structure.jpg",
+    description:
+      "Ti₃C₂ MXene and advanced 2D materials for energy storage, EMI shielding, composites and next-gen applications.",
+  },
+  {
+    name: "Polymer Nanocomposites (Masterbatches)",
     slug: "nanocomposites",
-    name: "Polymer Nanocomposites",
-    description: "CNT and graphene masterbatches for thermoplastics.",
-    image: "/images/categories/nanocomposites.jpg",
+    image: "/images/categories/polymer-nanocomposite-masterbatch-pellets.jpg",
+    description:
+      "Ready-to-use polymer masterbatches optimized for mechanical and electrical performance.",
+  },
+  {
+    name: "Fullerenes & Specialty Nanocarbons",
+    slug: "specialty",
+    image: "/images/categories/fullerenes-c60-sample.jpg",
+    description:
+      "High-purity C60/C70 and custom carbon nanostructures for advanced R&D.",
+  },
+  {
+    name: "Dispersions & Custom Formulations",
+    slug: "dispersions",
+    image: "/images/categories/nanomaterial-dispersions-lab-beakers.jpg",
+    description:
+      "Water, IPA, DMF, NMP & custom carriers. Stable and application-ready dispersions.",
   },
 ];
+
 
 /* ---------------------------
    PRODUCTS  

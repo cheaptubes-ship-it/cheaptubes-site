@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --bg-darkest: #05070c;   /* anchor */
+  --bg-dark:    #0b0e14;   /* replaces slate-950 */
+  --bg-panel:   #11151d;   /* replaces slate-900 */
+  --bg-soft:    #1a1f2a;   /* replaces slate-800/700 */
+  --text-main:  #e5e8f0;   /* slightly brighter text */
+}
